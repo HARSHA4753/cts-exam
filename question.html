@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function isDivisible(numa, num) {
+  if (numa % num == 0) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+function by3(num) {
+  if (isDivisible(num, 3)) {
+    document.write("Fizz");
+  } else {
+    return false;
+  }
+};
+
+function fb(num) {
+  if (isDivisible(num, 5)) {
+    document.write("Buzz");
+  } else {
+    return false;
+  }
+};
+
+for (var a=1; a<=100; a++) {
+  if (by3(a)) {
+    by3(a);
+    if (fb(a)) {
+      fb(a);
+      document.write("\n");
+    } else {
+      document.write("\n");
+    }
+  } else if (fb(a)) {
+    fb(a);
+    document.write("\n");
+  } else {
+    document.write(a+"\n")
+  }
+}
+</script>
+</head>
+<body>
+
+</body>
+</html>
